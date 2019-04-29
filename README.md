@@ -19,7 +19,7 @@ In the created graph, nodes are integers and arrows between nodes denote arithme
 
 # Example graph
 
-![nice example repeated derivative](https://github.com/joelN123/arithmetic-derivative/blob/master/nice_example_repeated_derivative.pdf)
+![nice example repeated derivative](https://github.com/joelN123/arithmetic-derivative/blob/master/nice_example_repeated_derivative.png)
 
 # Possible outcomes of repeated differentiation
 
