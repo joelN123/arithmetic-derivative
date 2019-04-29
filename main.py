@@ -6,28 +6,28 @@ from derivative_class_definitions import ArithmeticDerivativeGraph
 from graphviz import Digraph
 import random
 
+
 if __name__ == "__main__":
+    interval = (2,101)
+    filename = "repeated_derivative"
+    maths_graph = ArithmeticDerivativeGraph()
 
-	interval = (2,101)
-	filename = "repeated_derivative"
+    print("Running repeated derivative on each seed value in interval {}, {}".format(*interval))
 
-	maths_graph = ArithmeticDerivativeGraph()
+    for initial_value in range(*interval):
+        error_message = maths_graph.repeat_derivative(initial_value)
+        if error_message is not None:
+            print(error_message)
+            break
 
-	print("Running repeated derivative on each seed value in interval {}, {}".format(*interval))
+    print("Finished maths graph, now rendering graphviz")
 
-	for initial_value in range(*interval):
-		error_message = maths_graph.repeat_derivative(initial_value)
-		if error_message is not None:
-			print(error_message)
-			break
+    visual_graph = Digraph(name=filename, engine='twopi', graph_attr={'overlap': 'false'})
+    visual_graph.edges(maths_graph.edge_set)
+    for item in maths_graph.node_set:
+        visual_graph.node(str(item[0]), str(item[1]))
+    visual_graph.attr(root = '1')
+    file_location = visual_graph.render(filename=filename, cleanup=True, format="pdf")
 
-	print("Finished maths graph, now rendering graphviz")
+    print("Finished rendering graphvis as : {}".format(file_location))
 
-	visual_graph = Digraph(name=filename, engine='twopi', graph_attr={'overlap': 'false'})
-	visual_graph.edges(maths_graph.edge_set)
-	for item in maths_graph.node_set:
-		visual_graph.node(str(item[0]), str(item[1]))
-	visual_graph.attr(root = '1')
-	file_location = visual_graph.render(filename=filename, cleanup=True, format="pdf")
-
-	print("Finished rendering graphvis as : {}".format(file_location))
