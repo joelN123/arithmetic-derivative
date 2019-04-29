@@ -23,7 +23,7 @@ In the created graph, nodes are integers and arrows between nodes denote arithme
 
 # Possible outcomes of repeated differentiation
 
-Looking at the example graph, there's a lot going on. But, essentially there are three cases for where the derivative ends up :
+Looking at the example graph, there's a lot going on. But, essentially there are three cases for where the derivative ends up
 
 #### Firstly :
 
