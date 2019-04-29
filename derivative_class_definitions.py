@@ -8,10 +8,10 @@ from sympy.ntheory import factorint
 class ArithmeticDerivativeGraph():
     """ This class defines a graph representing the arithmetic derivative."""
     def __init__(self,
-                 node_set = {(1, "1 = root")},
-                 edge_set = set(),
-                 iterations = 100,
-                 max_value = 10**18
+                 node_set={(1, "1 = root")},
+                 edge_set=set(),
+                 iterations=100,
+                 max_value=10**18
                  ):
                      self.node_set = node_set
                      self.edge_set = edge_set
