@@ -26,7 +26,7 @@ if __name__ == "__main__":
     visual_graph.edges(maths_graph.edge_set)
     for item in maths_graph.node_set:
         visual_graph.node(str(item[0]), str(item[1]))
-    visual_graph.attr(root = '1')
+    visual_graph.attr(root='1')
     file_location = visual_graph.render(filename=filename, cleanup=True, format="pdf")
 
     print("Finished rendering graphvis as : {}".format(file_location))
