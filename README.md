@@ -17,6 +17,12 @@ In this code, repeated arithmetic differentiation is performed on a set of initi
 
 In the created graph, nodes are integers and arrows between nodes denote arithmetic differentiation. For example, there is an arrow from 26 to 15 because the arithmetic derivative of 26 is 15.
 
+## Maths definition
+
+The arithmetic derivative is defined such that
+1. (xy)' = x'y + xy' for any two positive integers x,y (analogous to the usual kind of derivative).
+2. p' = 1 for any prime p.
+
 ## Example graph
 
 ![nice example repeated derivative](https://github.com/joelN123/arithmetic-derivative/blob/master/nice_example_repeated_derivative.png)
@@ -29,7 +35,7 @@ Looking at the example graph, there's a lot going on. But, essentially there are
 
 At 1. The arithmetic derivative of 1 is 0, and arithmetic derivative of 0 is 0. So, once 1 is reached, the journey ends. For this reason, I've written 'root' for node 1.
 
-p.s. prime numbers always have derivative equal to 1 - convince yourself.
+p.s. prime numbers always have derivative equal to 1 - this is in the definition. But also, the prime numbers are the only numbers with derivative equal to 1 - convince yourself.
 
 #### Secondly :
 
