@@ -19,7 +19,30 @@ In the created graph, nodes are integers and arrows between nodes denote arithme
 
 # Example graph
 
+![nice example repeated derivative](https://github.com/joelN123/arithmetic-derivative/blob/master/nice_example_repeated_derivative.pdf)
 
 # Possible outcomes of repeated differentiation
 
+Looking at the example graph, there's a lot going on. But, essentially there are three cases for where the derivative ends up :
 
+#### Firstly :
+
+At 1. The arithmetic derivative of 1 is 0, and arithmetic derivative of 0 is 0. So, once 1 is reached, the journey ends. For this reason, I've written 'root' for node 1.
+
+p.s. prime numbers always have derivative equal to 1 - convince yourself.
+
+#### Secondly :
+
+For some values, their derivative is equal to themselves (for example 4). In these cases, no new nodes are reached, and the code can stop computing arithmetic derivative.
+
+p.s. the values p^p (for p prime) always lead to this kind of loop - convince yourself.
+
+#### Thirdly :
+
+Divergence. In some cases, values can get very high before coming back down to 1. However, there are some nodes (labelled 'diverge'), that will continue to get larger and larger (monotonically) and never get smaller. For these nodes, the code will stop taking derivatives and label as 'diverge'.
+
+p.s. an integer that contains at least one prime power p^n with n>p will always diverge - convince yourself.
+
+#### Other cases ?
+
+There may be other cases... For example, a loop of length longer than one. Or a non-looping path that does not hit 1, and does not hit any of the divergent numbers mentioned in case three above. However, with using only a small number of initial integer values, I did not find any of these other possible cases.
