@@ -11,7 +11,7 @@ For the prime decomposition, I used [factorint](https://docs.sympy.org/latest/mo
 
 The [arithmetic derivative](https://en.wikipedia.org/wiki/Arithmetic_derivative) is a map from the positive integers to itself. It has some similar properties to the usual kind of derivative.
 
-Since the input and output of the arithmetic derivative are both positive integers, it is possible to do repeated arithmetic differentiation on some initial integer.
+Since the input and output of the arithmetic derivative are both positive integers, it is possible to do repeated arithmetic differentiation on some initial integer. For example, let's say we start with 77. The derivative of 77 is 18. And the derivative of 18 is 21. And the derivative of 21 is 10. And so on. So, three iterations of repeated differentiation on an initial value of 77 would look like 77 -> 18 -> 21 -> 10.
 
 In this code, repeated arithmetic differentiation is performed on a set of initial integer values (default is up to 100).
 
